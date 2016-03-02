@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24 Feb 2016 11:30:20 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Contact" table="contact" catalog="contactdb" optimistic-lock="version">
+        <id name="contactId" type="int">
+            <column name="contact_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="45" not-null="true" />
+        </property>
+        <property name="telephone" type="string">
+            <column name="telephone" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
